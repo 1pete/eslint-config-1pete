@@ -1,0 +1,41 @@
+{
+  "name": "eslint-config-1pete-react",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1pete/eslint-config-1pete.git"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/1pete/eslint-config-1pete/issues"
+  },
+  "keywords": [
+    "eslint",
+    "config",
+    "react"
+  ],
+  "files": [
+    "base.js",
+    "index.js",
+    "overrides.js"
+  ],
+  "peerDependencies": {
+    "eslint": "^4.19.0"
+  },
+  "dependencies": {
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-jsx-a11y": "^6.0.0",
+    "eslint-plugin-react": "^7.7.0"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-jsx-a11y": "^6.0.0",
+    "eslint-plugin-react": "^7.7.0"
+  },
+  "scripts": {
+    "lint": "eslint ./*.js"
+  }
+}

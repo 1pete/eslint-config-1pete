@@ -1,0 +1,5 @@
+extends: ./packages/eslint-config-1pete/index.js
+rules:
+  global-require: off
+  import/no-dynamic-require: off
+  import/no-extraneous-dependencies: off

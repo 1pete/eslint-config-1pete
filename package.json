@@ -1,0 +1,14 @@
+{
+  "name": "eslint-config-1pete",
+  "private": true,
+  "scripts": {
+    "lint": "eslint *.js commands"
+  },
+  "devDependencies": {
+    "airbnb-style": "github:airbnb/javascript",
+    "eslint": "^4.19.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-restricted-globals": "^0.1.1",
+    "lodash": "^4.17.10"
+  }
+}
