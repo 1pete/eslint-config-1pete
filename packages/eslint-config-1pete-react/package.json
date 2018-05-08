@@ -13,8 +13,9 @@
   },
   "keywords": [
     "eslint",
-    "config",
-    "react"
+    "eslintconfig",
+    "react",
+    "jsx"
   ],
   "files": [
     "base.js",
