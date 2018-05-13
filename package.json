@@ -5,10 +5,11 @@
     "lint": "eslint *.js commands"
   },
   "devDependencies": {
-    "airbnb-style": "github:airbnb/javascript",
-    "eslint": "^4.19.0",
-    "eslint-plugin-import": "^2.11.0",
-    "eslint-restricted-globals": "^0.1.1",
-    "lodash": "^4.17.10"
+    "@octokit/rest": "^15.4.1",
+    "eslint": "~4.19.0",
+    "eslint-plugin-import": "~2.11.0",
+    "eslint-restricted-globals": "~0.1.0",
+    "lodash": "~4.17.0",
+    "simple-git": "~1.92.0"
   }
 }

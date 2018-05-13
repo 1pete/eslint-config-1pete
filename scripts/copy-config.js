@@ -2,13 +2,13 @@ const _ = require('lodash')
 const fs = require('fs')
 const path = require('path')
 
-const baseConfig = require('airbnb-style/packages/eslint-config-airbnb-base/index.js')
+const baseConfig = require('./airbnb-config/packages/eslint-config-airbnb-base/index.js')
 
 const reactConfig = {
   extends: [
-    'airbnb-style/packages/eslint-config-airbnb-base/rules/strict',
-    'airbnb-style/packages/eslint-config-airbnb/rules/react',
-    'airbnb-style/packages/eslint-config-airbnb/rules/react-a11y',
+    './airbnb-config/packages/eslint-config-airbnb-base/rules/strict',
+    './airbnb-config/packages/eslint-config-airbnb/rules/react',
+    './airbnb-config/packages/eslint-config-airbnb/rules/react-a11y',
   ].map(require.resolve),
   rules: {},
 }
