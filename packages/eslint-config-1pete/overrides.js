@@ -4,6 +4,7 @@ const OFF = 'off'
 const ERROR = 'error'
 
 const [, ...noRestrictedSyntaxBase] = base.rules['no-restricted-syntax']
+const [, noUnusedVarsBase] = base.rules['no-unused-vars']
 
 module.exports = {
   parserOptions: {
@@ -15,6 +16,13 @@ module.exports = {
     'no-restricted-syntax': [
       ERROR,
       ...noRestrictedSyntaxBase.filter(syntax => syntax.selector !== 'ForOfStatement'),
+    ],
+    'no-unused-vars': [
+      ERROR,
+      {
+        ...noUnusedVarsBase,
+        argsIgnorePattern: '^_',
+      },
     ],
     'prefer-const': OFF,
     semi: [ERROR, 'never'],

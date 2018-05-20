@@ -22,3 +22,13 @@ const listForIn = [1, 2, 3]
 for (let x of listForIn) {
   fn(x)
 }
+
+function fnUnusedArgs(a, b, _c) {
+  fn(a)
+  fn(b)
+}
+fnUnusedArgs()
+
+const unusedRest = { a: 10, b: 20, c: 30 }
+const { a, ...args } = unusedRest
+fn(args)
