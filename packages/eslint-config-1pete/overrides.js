@@ -1,12 +1,16 @@
+const OFF = 'off'
+const ERROR = 'error'
+
 module.exports = {
   parserOptions: {
     ecmaVersion: 8,
   },
   rules: {
-    'no-await-in-loop': 'off',
-    'prefer-const': 'off',
-    semi: ['error', 'never'],
+    'implicit-arrow-linebreak': OFF,
+    'no-await-in-loop': OFF,
+    'prefer-const': OFF,
+    semi: [ERROR, 'never'],
 
-    'import/dynamic-import-chunkname': 'off',
+    'import/dynamic-import-chunkname': OFF,
   },
 }

@@ -12,3 +12,8 @@ async function awaitInLoop() {
   }
 }
 awaitInLoop()
+
+const implicitArrowLineBreak = () =>
+  10
+
+fn(implicitArrowLineBreak)
