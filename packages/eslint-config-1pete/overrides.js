@@ -3,6 +3,7 @@ module.exports = {
     ecmaVersion: 8,
   },
   rules: {
+    'no-await-in-loop': 'off',
     'prefer-const': 'off',
     semi: ['error', 'never'],
 
