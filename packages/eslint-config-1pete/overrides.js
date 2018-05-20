@@ -19,10 +19,9 @@ module.exports = {
     ],
     'no-unused-vars': [
       ERROR,
-      {
-        ...noUnusedVarsBase,
+      Object.assign({}, noUnusedVarsBase, {
         argsIgnorePattern: '^_',
-      },
+      }),
     ],
     'prefer-const': OFF,
     semi: [ERROR, 'never'],
