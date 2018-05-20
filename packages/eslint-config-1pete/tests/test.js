@@ -29,7 +29,7 @@ describe('eslint config 1pete', () => {
     const ruleNames = fs.readdirSync(subjectPath)
 
     ruleNames.forEach((ruleName) => {
-      it(`test: ${ruleName}`, () => {
+      it(`rule: ${ruleName}`, () => {
         const fileNames = fs.readdirSync(path.resolve(subjectPath, ruleName))
         fileNames.forEach((fileName) => {
           const report = new CLIEngine()
