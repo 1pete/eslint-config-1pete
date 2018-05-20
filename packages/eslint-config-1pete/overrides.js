@@ -8,7 +8,7 @@ const [, noUnusedVarsBase] = base.rules['no-unused-vars']
 
 module.exports = {
   parserOptions: {
-    ecmaVersion: 8,
+    ecmaVersion: 9,
   },
   rules: {
     'implicit-arrow-linebreak': OFF,
