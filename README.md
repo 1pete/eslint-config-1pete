@@ -1,7 +1,7 @@
 # eslint-config-1pete
-just another eslint config
+Just another eslint config
 
-This config is almost the same with airbnb's style guide, exept some rules overridden. This config also use config base from airbnb's repo's master branch, so it will be latest regardless what publishes to npm registry.
+This config is almost the same with [airbnb's style guide](https://github.com/airbnb/javascript), except some rules are overridden. This config also use config based from airbnb's repo's master branch, so it will be latest regardless what publishes to npm registry.
 
 ### How to install
 normal package
@@ -70,3 +70,6 @@ let b = 10
 
 #### semi
 this disallows semicolons as the end of statements (except to disambiguate statements)
+```js
+const a = 10
+```
