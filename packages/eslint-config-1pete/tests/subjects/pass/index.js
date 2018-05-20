@@ -17,3 +17,8 @@ const implicitArrowLineBreak = () =>
   10
 
 fn(implicitArrowLineBreak)
+
+const listForIn = [1, 2, 3]
+for (let x of listForIn) {
+  fn(x)
+}
