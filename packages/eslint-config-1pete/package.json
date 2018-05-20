@@ -1,11 +1,12 @@
 {
   "name": "eslint-config-1pete",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "",
   "main": "index.js",
+  "homepage": "https://github.com/1pete/eslint-config-1pete",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/1pete/eslint-config-1pete.git"
+    "url": "https://github.com/1pete/eslint-config-1pete"
   },
   "license": "MIT",
   "bugs": {
@@ -38,5 +39,8 @@
     "check-rules": "eslint-find-rules -u",
     "lint": "eslint . --ignore-pattern tests/subjects/fail",
     "test": "mocha tests/test.js"
+  },
+  "engines": {
+    "node": ">= 4"
   }
 }
