@@ -1,0 +1,2 @@
+const fn = () => null;
+fn()
