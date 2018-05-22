@@ -11,6 +11,7 @@ module.exports = {
     ecmaVersion: 9,
   },
   rules: {
+    'class-methods-use-this': OFF,
     'implicit-arrow-linebreak': OFF,
     'no-await-in-loop': OFF,
     'no-restricted-syntax': [

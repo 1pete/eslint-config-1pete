@@ -14,12 +14,23 @@ yarn add --dev eslint eslint-config-1pete
 ```
 
 ### Overridden rules
+1. [class-methods-use-this](#class-methods-use-this)
 1. [implicit-arrow-linebreak](#implicit-arrow-linebreak)
 1. [no-await-in-loop](#no-await-in-loop)
 1. [no-restricted-syntax](#no-restricted-syntax)
 1. [no-unused-vars](#no-unused-vars)
 1. [prefer-const](#prefer-const)
 1. [semi](#semi)
+
+#### class-methods-use-this
+this allows class function without using `this`
+```js
+class A {
+  run() {
+    doSomething()
+  }
+}
+```
 
 #### implicit-arrow-linebreak
 this allows both following patterns

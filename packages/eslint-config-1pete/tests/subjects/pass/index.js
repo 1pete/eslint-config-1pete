@@ -32,3 +32,11 @@ fnUnusedArgs()
 const unusedRest = { a: 10, b: 20, c: 30 }
 const { a, ...args } = unusedRest
 fn(args)
+
+export class NoThis {
+  noThis() {
+
+  }
+}
+
+export default fn
