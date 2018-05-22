@@ -26,7 +26,7 @@
     "eslint": "^4.19.0"
   },
   "dependencies": {
-    "eslint-config-1pete": "^0.0.1",
+    "eslint-config-1pete": "~0.1.0",
     "eslint-plugin-jsx-a11y": "~6.0.0",
     "eslint-plugin-react": "~7.8.0"
   },
