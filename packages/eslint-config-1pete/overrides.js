@@ -26,7 +26,5 @@ module.exports = {
     ],
     'prefer-const': OFF,
     semi: [ERROR, 'never'],
-
-    'import/dynamic-import-chunkname': OFF,
   },
 }

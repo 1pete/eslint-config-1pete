@@ -1173,6 +1173,13 @@ module.exports = {
     ],
     yoda: 'error',
     'import/default': 'off',
+    'import/dynamic-import-chunkname': [
+      'off',
+      {
+        importFunctions: [],
+        webpackChunknameFormat: '[0-9a-zA-Z-_/.]+',
+      },
+    ],
     'import/export': 'error',
     'import/exports-last': 'off',
     'import/extensions': [
