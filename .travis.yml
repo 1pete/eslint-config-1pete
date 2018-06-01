@@ -3,6 +3,8 @@ node_js:
   - "10"
   - "8"
 
+cache: yarn
+
 install:
   - 'if [ -n "${PACKAGE-}" ]; then cd "packages/${PACKAGE}"; fi'
   - yarn install --frozen-lockfile
