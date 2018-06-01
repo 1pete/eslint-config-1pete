@@ -5,6 +5,7 @@ node_js:
 
 install:
   - 'if [ -n "${PACKAGE-}" ]; then cd "packages/${PACKAGE}"; fi'
+  - yarn install --frozen-lockfile
   - 'if [ -n "${ESLINT}" ]; then yarn add "eslint@${ESLINT}"; fi'
 
 script:
