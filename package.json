@@ -2,7 +2,8 @@
   "name": "eslint-config-1pete",
   "private": true,
   "scripts": {
-    "lint": "eslint *.js commands"
+    "lint": "eslint *.js commands",
+    "test": "exit 0"
   },
   "devDependencies": {
     "@octokit/rest": "~15.8.0",

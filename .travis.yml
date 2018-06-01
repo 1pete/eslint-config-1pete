@@ -1,0 +1,30 @@
+language: node_js
+node_js:
+  - "10"
+  - "8"
+
+install:
+  - 'if [ -n "${PACKAGE-}" ]; then cd "packages/${PACKAGE}"; fi'
+  - 'if [ -n "${ESLINT}" ]; then yarn add "eslint@${ESLINT}"; fi'
+
+script:
+  - yarn lint
+  - yarn test
+
+sudo: false
+
+branches:
+  only:
+    - master
+
+env:
+  matrix:
+    - 'PACKAGE=eslint-config-1pete'
+    - 'PACKAGE=eslint-config-1pete-react'
+    - 'ESLINT=next PACKAGE=eslint-config-1pete'
+    - 'ESLINT=next PACKAGE=eslint-config-1pete-react'
+
+matrix:
+  include:
+    - node_js: "lts/*"
+      env: ''

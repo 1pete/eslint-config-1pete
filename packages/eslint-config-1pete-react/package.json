@@ -36,6 +36,7 @@
   },
   "scripts": {
     "check-rules": "eslint-find-rules -u",
-    "lint": "eslint ./*.js"
+    "lint": "eslint ./*.js",
+    "test": "exit 0"
   }
 }
