@@ -401,7 +401,12 @@ module.exports = {
         noStrings: true,
       },
     ],
-    'react/jsx-no-target-blank': 'error',
+    'react/jsx-no-target-blank': [
+      'error',
+      {
+        enforceDynamicLinks: 'always',
+      },
+    ],
     'react/jsx-no-undef': 'error',
     'react/jsx-one-expression-per-line': 'error',
     'react/jsx-pascal-case': [
@@ -411,6 +416,7 @@ module.exports = {
         ignore: [],
       },
     ],
+    'react/jsx-props-no-multi-spaces': 'error',
     'react/jsx-sort-default-props': [
       'off',
       {
