@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-1pete-react",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "",
   "main": "index.js",
   "repository": "github:1pete/eslint-config-1pete-react",
