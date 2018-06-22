@@ -1191,10 +1191,7 @@ module.exports = {
         jsx: 'never',
       },
     ],
-    'import/first': [
-      'error',
-      'absolute-first',
-    ],
+    'import/first': 'error',
     'import/group-exports': 'off',
     'import/imports-first': 'off',
     'import/max-dependencies': [
@@ -1243,6 +1240,7 @@ module.exports = {
           'test-*.{js,jsx}',
           '**/*{.,_}{test,spec}.{js,jsx}',
           '**/jest.config.js',
+          '**/vue.config.js',
           '**/webpack.config.js',
           '**/webpack.config.*.js',
           '**/rollup.config.js',
@@ -1281,17 +1279,15 @@ module.exports = {
     'import/no-useless-path-segments': 'error',
     'import/no-webpack-loader-syntax': 'error',
     'import/order': [
-      'off',
+      'error',
       {
         groups: [
-          'builtin',
-          'external',
-          'internal',
-          'parent',
-          'sibling',
-          'index',
+          [
+            'builtin',
+            'external',
+            'internal',
+          ],
         ],
-        'newlines-between': 'never',
       },
     ],
     'import/prefer-default-export': 'error',
