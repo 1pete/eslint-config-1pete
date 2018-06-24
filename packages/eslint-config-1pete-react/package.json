@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-1pete-react",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "",
   "main": "index.js",
   "repository": "github:1pete/eslint-config-1pete-react",
@@ -20,7 +20,7 @@
     "overrides.js"
   ],
   "peerDependencies": {
-    "eslint": "^4.19.0"
+    "eslint": "^4.19.0 || ^5"
   },
   "dependencies": {
     "eslint-config-1pete": "~0.2.0",
