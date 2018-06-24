@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-1pete",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "",
   "main": "index.js",
   "homepage": "https://github.com/1pete/eslint-config-1pete",
@@ -21,7 +21,7 @@
     "overrides.js"
   ],
   "peerDependencies": {
-    "eslint": "^4.19.0"
+    "eslint": "^4.19.0 || ^5"
   },
   "dependencies": {
     "eslint-plugin-import": "~2.12.0"
