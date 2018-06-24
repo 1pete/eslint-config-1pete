@@ -2,7 +2,7 @@
   "name": "eslint-config-1pete",
   "private": true,
   "scripts": {
-    "lint": "eslint *.js commands",
+    "lint": "eslint scripts/*.js",
     "test": "exit 0"
   },
   "devDependencies": {
