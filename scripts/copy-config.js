@@ -2,6 +2,7 @@ const _ = require('lodash')
 const fs = require('fs')
 const path = require('path')
 
+// eslint-disable-next-line import/no-unresolved
 const baseConfig = require('./airbnb-config/packages/eslint-config-airbnb-base/index.js')
 
 const reactConfig = {
