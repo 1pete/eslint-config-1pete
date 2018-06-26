@@ -8,7 +8,7 @@
   "devDependencies": {
     "@octokit/rest": "~15.9.0",
     "eslint": "~5.0.0",
-    "eslint-plugin-import": "~2.12.0",
+    "eslint-plugin-import": "~2.13.0",
     "eslint-restricted-globals": "~0.1.0",
     "lodash": "~4.17.0",
     "simple-git": "~1.96.0"
