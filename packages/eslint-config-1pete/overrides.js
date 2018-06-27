@@ -24,6 +24,7 @@ module.exports = {
         argsIgnorePattern: '^_',
       }),
     ],
+    'no-use-before-define': ['error', { functions: false, classes: true, variables: true }],
     'prefer-const': OFF,
     semi: [ERROR, 'never'],
   },

@@ -19,6 +19,7 @@ yarn add --dev eslint eslint-config-1pete
 1. [no-await-in-loop](#no-await-in-loop)
 1. [no-restricted-syntax](#no-restricted-syntax)
 1. [no-unused-vars](#no-unused-vars)
+1. [no-use-before-define](#no-use-before-define)
 1. [prefer-const](#prefer-const)
 1. [semi](#semi)
 
@@ -65,6 +66,16 @@ app.use((error, req, res, _next) => {
   if (error) res.end('error')
   else res.end('ok')
 })
+```
+
+#### no-use-before-define
+this allows function hoisting
+```js
+run()
+
+function run() {
+  return true
+}
 ```
 
 #### prefer-const
