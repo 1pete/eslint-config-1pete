@@ -20,11 +20,14 @@ const packages = [
 ]
 
 packages.forEach(([targetConfig, packageName]) => {
-  const { extends: extensions, ...config } = targetConfig
+  const config = {}
+  const { extends: extensions, ...extra } = targetConfig
 
   extensions.forEach((extension) => {
     _.merge(config, require(extension))
   })
+
+  _.merge(config, extra)
 
   const {
     plugins,
