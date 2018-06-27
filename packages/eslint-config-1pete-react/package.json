@@ -28,7 +28,7 @@
     "eslint-plugin-react": "~7.10.0"
   },
   "devDependencies": {
-    "eslint": "~4.19.0",
+    "eslint": "~5.0.0",
     "eslint-find-rules": "~3.3.0"
   },
   "scripts": {
