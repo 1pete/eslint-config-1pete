@@ -1,6 +1,7 @@
 const _ = require('lodash')
 const fs = require('fs')
 const path = require('path')
+const { CLIEngine } = require('eslint')
 
 // eslint-disable-next-line import/no-unresolved
 const baseConfig = require('./airbnb-config/packages/eslint-config-airbnb-base/index.js')
@@ -54,5 +55,20 @@ packages.forEach(([targetConfig, packageName]) => {
     rules: ruleNames.reduce((acc, ruleName) => ({ ...acc, [ruleName]: rules[ruleName] }), {}),
   }, (key, value) => (value === Infinity ? 1000 : value), 2)}\n`
 
-  fs.writeFileSync(path.resolve(__dirname, '..', 'packages', packageName, 'base.js'), content)
+  const filePath = path.resolve(__dirname, '..', 'packages', packageName, 'base.js')
+  fs.writeFileSync(filePath, content)
+
+  // run twice
+  eslintFileAndFix(filePath)
+  eslintFileAndFix(filePath)
 })
+
+function eslintFileAndFix(filePath) {
+  const cli = new CLIEngine({
+    configFile: path.resolve(__dirname, '../.eslintrc'),
+    fix: true,
+  })
+  const report = cli.executeOnFiles([filePath])
+  CLIEngine.outputFixes(report)
+  return report
+}
