@@ -1,5 +1,3 @@
-/* eslint-env mocha */
-
 const _ = require('lodash')
 const { CLIEngine } = require('eslint')
 const fs = require('fs')

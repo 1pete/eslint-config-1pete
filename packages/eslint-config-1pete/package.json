@@ -21,7 +21,7 @@
     "overrides.js"
   ],
   "peerDependencies": {
-    "eslint": "^4.19.0 || ^5"
+    "eslint": "^5"
   },
   "dependencies": {
     "eslint-plugin-import": "~2.13.0"
@@ -38,6 +38,6 @@
     "test": "mocha tests/test.js"
   },
   "engines": {
-    "node": ">= 4"
+    "node": ">= 6"
   }
 }

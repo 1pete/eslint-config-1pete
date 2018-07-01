@@ -24,7 +24,6 @@ env:
   matrix:
     - 'PACKAGE=eslint-config-1pete'
     - 'PACKAGE=eslint-config-1pete-react'
-    - 'ESLINT=4 PACKAGE=eslint-config-1pete'
     - 'ESLINT=4 PACKAGE=eslint-config-1pete-react'
 
 matrix:
