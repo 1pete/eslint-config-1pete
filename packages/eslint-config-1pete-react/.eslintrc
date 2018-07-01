@@ -1,1 +1,2 @@
-extends: ../eslint-config-1pete/index.js
+root: true
+extends: 1pete
