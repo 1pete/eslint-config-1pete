@@ -339,6 +339,10 @@ module.exports = {
         exceptAfterSingleLine: false,
       },
     ],
+    'max-classes-per-file': [
+      'off',
+      1,
+    ],
     'max-depth': [
       'off',
       4,
@@ -361,6 +365,15 @@ module.exports = {
         max: 300,
         skipBlankLines: true,
         skipComments: true,
+      },
+    ],
+    'max-lines-per-function': [
+      'off',
+      {
+        max: 50,
+        skipBlankLines: true,
+        skipComments: true,
+        IIFEs: true,
       },
     ],
     'max-nested-callbacks': 'off',
@@ -803,7 +816,12 @@ module.exports = {
     ],
     'no-return-await': 'error',
     'no-script-url': 'error',
-    'no-self-assign': 'error',
+    'no-self-assign': [
+      'error',
+      {
+        props: false,
+      },
+    ],
     'no-self-compare': 'error',
     'no-sequences': 'error',
     'no-shadow': 'error',
@@ -1011,6 +1029,7 @@ module.exports = {
       },
     ],
     'prefer-numeric-literals': 'error',
+    'prefer-object-spread': 'off',
     'prefer-promise-reject-errors': [
       'error',
       {

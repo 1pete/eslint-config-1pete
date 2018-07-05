@@ -24,8 +24,6 @@ module.exports = {
         argsIgnorePattern: '^_',
       }),
     ],
-    'max-classes-per-file': OFF,
-    'max-lines-per-function': OFF,
     'no-use-before-define': ['error', { functions: false, classes: true, variables: true }],
     'prefer-const': OFF,
     'prefer-object-spread': ERROR,
