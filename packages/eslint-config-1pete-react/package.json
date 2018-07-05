@@ -20,10 +20,10 @@
     "overrides.js"
   ],
   "peerDependencies": {
-    "eslint": "^4.19.0 || ^5"
+    "eslint": "^5"
   },
   "dependencies": {
-    "eslint-config-1pete": "~0.2.0",
+    "eslint-config-1pete": "~1.0.0",
     "eslint-plugin-jsx-a11y": "~6.1.0",
     "eslint-plugin-react": "~7.10.0"
   },

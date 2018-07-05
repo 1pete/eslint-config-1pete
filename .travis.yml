@@ -8,7 +8,6 @@ cache: yarn
 install:
   - 'if [ -n "${PACKAGE-}" ]; then cd "packages/${PACKAGE}"; fi'
   - yarn install --frozen-lockfile
-  - 'if [ -n "${ESLINT}" ]; then yarn add "eslint@${ESLINT}"; fi'
 
 script:
   - yarn lint
@@ -24,7 +23,6 @@ env:
   matrix:
     - 'PACKAGE=eslint-config-1pete'
     - 'PACKAGE=eslint-config-1pete-react'
-    - 'ESLINT=4 PACKAGE=eslint-config-1pete-react'
 
 matrix:
   include:
