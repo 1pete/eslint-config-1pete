@@ -14,6 +14,8 @@ module.exports = {
     'class-methods-use-this': OFF,
     'implicit-arrow-linebreak': OFF,
     'no-await-in-loop': OFF,
+    'no-async-promise-executor': ERROR,
+    'no-misleading-character-class': ERROR,
     'no-restricted-syntax': [
       ERROR,
       ...noRestrictedSyntaxBase.filter(syntax => syntax.selector !== 'ForOfStatement'),
@@ -27,6 +29,7 @@ module.exports = {
     'no-use-before-define': ['error', { functions: false, classes: true, variables: true }],
     'prefer-const': OFF,
     'prefer-object-spread': ERROR,
+    'require-atomic-updates': ERROR,
     semi: [ERROR, 'never'],
   },
 }

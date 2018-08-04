@@ -423,6 +423,7 @@ module.exports = {
     ],
     'no-alert': 'warn',
     'no-array-constructor': 'error',
+    'no-async-promise-executor': 'off',
     'no-await-in-loop': 'error',
     'no-bitwise': 'error',
     'no-buffer-constructor': 'error',
@@ -538,6 +539,7 @@ module.exports = {
         detectObjects: false,
       },
     ],
+    'no-misleading-character-class': 'off',
     'no-mixed-operators': [
       'error',
       {
@@ -1057,8 +1059,10 @@ module.exports = {
       },
     ],
     radix: 'error',
+    'require-atomic-updates': 'off',
     'require-await': 'off',
     'require-jsdoc': 'off',
+    'require-unicode-regexp': 'off',
     'require-yield': 'error',
     'rest-spread-spacing': [
       'error',

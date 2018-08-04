@@ -282,7 +282,7 @@ module.exports = {
       },
     ],
     'react/destructuring-assignment': [
-      'error',
+      'off',
       'always',
     ],
     'react/display-name': [
@@ -422,7 +422,7 @@ module.exports = {
       },
     ],
     'react/jsx-no-undef': 'error',
-    'react/jsx-one-expression-per-line': 'error',
+    'react/jsx-one-expression-per-line': 'off',
     'react/jsx-pascal-case': [
       'error',
       {
