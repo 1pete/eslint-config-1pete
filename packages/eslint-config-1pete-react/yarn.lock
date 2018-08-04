@@ -304,9 +304,9 @@ escape-string-regexp@^1.0.2, escape-string-regexp@^1.0.5:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/escape-string-regexp/-/escape-string-regexp-1.0.5.tgz#1b61c0562190a8dff6ae3bb2cf0200ca130b86d4"
 
-eslint-config-1pete@~1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-1pete/-/eslint-config-1pete-1.0.0.tgz#edab14c466c872cb1e286ec836e0eff55c5128f1"
+eslint-config-1pete@~1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-1pete/-/eslint-config-1pete-1.1.0.tgz#cd766da9b235272a5c248fcb6afcb956d0d90570"
   dependencies:
     eslint-plugin-import "~2.13.0"
 
