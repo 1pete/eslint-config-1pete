@@ -25,13 +25,22 @@ describe('eslint config 1pete', () => {
   describe('test fail', () => {
     const subjectPath = path.resolve(__dirname, 'subjects', 'fail')
     const ruleNames = fs.readdirSync(subjectPath)
+      .sort((a, b) => {
+        const pluginA = a.includes('_')
+        const pluginB = b.includes('_')
 
-    ruleNames.forEach((ruleName) => {
+        if (pluginA && !pluginB) return 1
+        if (!pluginA && pluginB) return -1
+        return a < b ? -1 : 1
+      })
+
+    ruleNames.forEach((folderName) => {
+      const ruleName = folderName.includes('_') ? folderName.split('_').join('/') : folderName
       it(`rule: ${ruleName}`, () => {
-        const fileNames = fs.readdirSync(path.resolve(subjectPath, ruleName))
+        const fileNames = fs.readdirSync(path.resolve(subjectPath, folderName))
         fileNames.forEach((fileName) => {
           const report = new CLIEngine()
-            .executeOnFiles([path.resolve(path.resolve(subjectPath, ruleName, fileName))])
+            .executeOnFiles([path.resolve(path.resolve(subjectPath, folderName, fileName))])
           if (report.errorCount === 0 || !getAllReportedRules(report).includes(ruleName)) {
             throw new Error(`expect error "${ruleName}" from file "${fileName}" but not found`)
           }

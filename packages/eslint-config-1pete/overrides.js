@@ -31,5 +31,7 @@ module.exports = {
     'prefer-object-spread': ERROR,
     'require-atomic-updates': ERROR,
     semi: [ERROR, 'never'],
+
+    'import/no-useless-path-segments': [ERROR, { commonjs: true }],
   },
 }
