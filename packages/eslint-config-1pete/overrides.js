@@ -33,5 +33,6 @@ module.exports = {
     semi: [ERROR, 'never'],
 
     'import/no-useless-path-segments': [ERROR, { commonjs: true }],
+    'import/prefer-default-export': OFF,
   },
 }
