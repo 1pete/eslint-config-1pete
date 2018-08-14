@@ -29,11 +29,13 @@
   },
   "devDependencies": {
     "eslint": "~5.3.0",
-    "eslint-find-rules": "~3.3.0"
+    "eslint-find-rules": "~3.3.0",
+    "lodash": "~4.17.0",
+    "mocha": "~5.2.0"
   },
   "scripts": {
     "check-rules": "eslint-find-rules -u",
-    "lint": "eslint ./*.js",
-    "test": "exit 0"
+    "lint": "eslint . --ignore-pattern tests/subjects/fail",
+    "test": "mocha tests/test.js"
   }
 }
