@@ -282,7 +282,7 @@ module.exports = {
       },
     ],
     'react/destructuring-assignment': [
-      'off',
+      'error',
       'always',
     ],
     'react/display-name': [
@@ -399,7 +399,9 @@ module.exports = {
       {
         ignoreRefs: true,
         allowArrowFunctions: true,
+        allowFunctions: false,
         allowBind: false,
+        ignoreDOMComponents: true,
       },
     ],
     'react/jsx-no-comment-textnodes': 'error',
@@ -422,7 +424,12 @@ module.exports = {
       },
     ],
     'react/jsx-no-undef': 'error',
-    'react/jsx-one-expression-per-line': 'off',
+    'react/jsx-one-expression-per-line': [
+      'error',
+      {
+        allow: 'single-child',
+      },
+    ],
     'react/jsx-pascal-case': [
       'error',
       {
