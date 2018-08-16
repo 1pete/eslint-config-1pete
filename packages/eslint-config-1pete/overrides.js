@@ -22,9 +22,10 @@ module.exports = {
     ],
     'no-unused-vars': [
       ERROR,
-      Object.assign({}, noUnusedVarsBase, {
+      {
+        ...noUnusedVarsBase,
         argsIgnorePattern: '^_',
-      }),
+      },
     ],
     'no-use-before-define': ['error', { functions: false, classes: true, variables: true }],
     'prefer-const': OFF,

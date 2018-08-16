@@ -1,8 +1,2 @@
 root: true
 extends: ./index.js
-
-parserOptions:
-  ecmaVersion: 2017
-
-rules:
-  prefer-object-spread: off
