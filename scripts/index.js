@@ -8,8 +8,8 @@ const commitData = require('./commit-data.json')
 const repo = { owner: 'airbnb', repo: 'javascript' }
 
 async function getLatestCommit() {
-  const { data: [{ sha }] } = await octokit.repos.getCommits({ ...repo, per_page: 1 })
-  const { data: { commit } } = await octokit.repos.getCommit({ ...repo, sha })
+  const { data: [{ sha }] } = await octokit.repos.listCommits({ ...repo, per_page: 1 })
+  const { data: { commit } } = await octokit.repos.getCommit({ ...repo, commit_sha: sha })
 
   const { date } = commit.committer
 
