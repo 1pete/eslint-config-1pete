@@ -56,6 +56,17 @@ module.exports = {
       'error',
       'prefer-double',
     ],
+    'no-underscore-dangle': [
+      'error',
+      {
+        allow: [
+          '__REDUX_DEVTOOLS_EXTENSION_COMPOSE__',
+        ],
+        allowAfterThis: false,
+        allowAfterSuper: false,
+        enforceInMethodNames: true,
+      },
+    ],
     strict: [
       'error',
       'never',
@@ -370,6 +381,10 @@ module.exports = {
       'error',
       'multiline-multiprop',
     ],
+    'react/jsx-fragments': [
+      'off',
+      'syntax',
+    ],
     'react/jsx-handler-names': [
       'off',
       {
@@ -498,12 +513,7 @@ module.exports = {
     'react/no-direct-mutation-state': 'off',
     'react/no-find-dom-node': 'error',
     'react/no-is-mounted': 'error',
-    'react/no-multi-comp': [
-      'error',
-      {
-        ignoreStateless: true,
-      },
-    ],
+    'react/no-multi-comp': 'off',
     'react/no-redundant-should-component-update': 'error',
     'react/no-render-return-value': 'error',
     'react/no-set-state': 'off',
