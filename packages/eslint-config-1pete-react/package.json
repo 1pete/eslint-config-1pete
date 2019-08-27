@@ -20,16 +20,16 @@
     "overrides.js"
   ],
   "peerDependencies": {
-    "eslint": "^5.16.0"
+    "eslint": "^6.2.0"
   },
   "dependencies": {
     "eslint-config-1pete": "~1.4.0",
     "eslint-plugin-jsx-a11y": "~6.2.0",
-    "eslint-plugin-react": "~7.13.0"
+    "eslint-plugin-react": "~7.14.0"
   },
   "devDependencies": {
-    "eslint": "~5.16.0",
-    "eslint-find-rules": "~3.3.0",
+    "eslint": "~6.2.0",
+    "eslint-find-rules": "~3.4.0",
     "lodash": "~4.17.0",
     "mocha": "~5.2.0"
   },
