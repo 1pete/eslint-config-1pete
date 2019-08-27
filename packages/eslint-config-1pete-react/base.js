@@ -20,7 +20,7 @@ module.exports = {
     },
     react: {
       pragma: 'React',
-      version: '16.0',
+      version: 'detect',
     },
     propWrapperFunctions: [
       'forbidExtraProps',
@@ -120,6 +120,37 @@ module.exports = {
     ],
     'jsx-a11y/aria-unsupported-elements': 'error',
     'jsx-a11y/click-events-have-key-events': 'error',
+    'jsx-a11y/control-has-associated-label': [
+      'error',
+      {
+        labelAttributes: [
+          'label',
+        ],
+        controlComponents: [],
+        ignoreElements: [
+          'audio',
+          'canvas',
+          'embed',
+          'input',
+          'textarea',
+          'tr',
+          'video',
+        ],
+        ignoreRoles: [
+          'grid',
+          'listbox',
+          'menu',
+          'menubar',
+          'radiogroup',
+          'row',
+          'tablist',
+          'toolbar',
+          'tree',
+          'treegrid',
+        ],
+        depth: 5,
+      },
+    ],
     'jsx-a11y/heading-has-content': [
       'error',
       {
@@ -143,7 +174,7 @@ module.exports = {
       },
     ],
     'jsx-a11y/label-has-for': [
-      'error',
+      'off',
       {
         components: [],
         required: {
@@ -358,6 +389,13 @@ module.exports = {
         children: 'never',
       },
     ],
+    'react/jsx-curly-newline': [
+      'error',
+      {
+        multiline: 'consistent',
+        singleline: 'consistent',
+      },
+    ],
     'react/jsx-curly-spacing': [
       'error',
       'never',
@@ -382,7 +420,7 @@ module.exports = {
       'multiline-multiprop',
     ],
     'react/jsx-fragments': [
-      'off',
+      'error',
       'syntax',
     ],
     'react/jsx-handler-names': [
@@ -453,6 +491,14 @@ module.exports = {
       },
     ],
     'react/jsx-props-no-multi-spaces': 'error',
+    'react/jsx-props-no-spreading': [
+      'error',
+      {
+        html: 'enforce',
+        custom: 'enforce',
+        exceptions: [],
+      },
+    ],
     'react/jsx-sort-default-props': [
       'off',
       {
@@ -536,6 +582,7 @@ module.exports = {
       'error',
       'always',
     ],
+    'react/prefer-read-only-props': 'off',
     'react/prefer-stateless-function': [
       'error',
       {
@@ -594,13 +641,20 @@ module.exports = {
             'getInitialState',
             'state',
             'getChildContext',
+            'getDerivedStateFromProps',
             'componentWillMount',
+            'UNSAFE_componentWillMount',
             'componentDidMount',
             'componentWillReceiveProps',
+            'UNSAFE_componentWillReceiveProps',
             'shouldComponentUpdate',
             'componentWillUpdate',
+            'UNSAFE_componentWillUpdate',
+            'getSnapshotBeforeUpdate',
             'componentDidUpdate',
+            'componentDidCatch',
             'componentWillUnmount',
+            'componentDidCatch',
           ],
           rendering: [
             '/^render.+$/',
@@ -617,6 +671,14 @@ module.exports = {
         requiredFirst: false,
         sortShapeProp: true,
       },
+    ],
+    'react/state-in-constructor': [
+      'error',
+      'always',
+    ],
+    'react/static-property-placement': [
+      'error',
+      'property assignment',
     ],
     'react/style-prop-object': 'error',
     'react/void-dom-elements-no-children': 'error',

@@ -3,7 +3,7 @@ const { CLIEngine } = require('eslint')
 const fs = require('fs')
 const path = require('path')
 
-const getAllReportedRules = report =>
+const getAllReportedRules = (report) =>
   _.chain(report.results)
     .map('messages')
     .flatten()

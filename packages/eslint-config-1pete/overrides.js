@@ -18,7 +18,7 @@ module.exports = {
     'no-misleading-character-class': ERROR,
     'no-restricted-syntax': [
       ERROR,
-      ...noRestrictedSyntaxBase.filter(syntax => syntax.selector !== 'ForOfStatement'),
+      ...noRestrictedSyntaxBase.filter((syntax) => syntax.selector !== 'ForOfStatement'),
     ],
     'no-unused-vars': [
       ERROR,
