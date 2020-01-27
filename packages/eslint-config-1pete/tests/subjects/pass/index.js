@@ -1,8 +1,10 @@
 const fn = () => null
 
+// prefer-const
 let ignorePreferConst = 0
 fn(ignorePreferConst)
 
+// no-await-in-loop
 async function awaitInLoop() {
   let i = 10
 
@@ -13,6 +15,7 @@ async function awaitInLoop() {
 }
 awaitInLoop()
 
+// implicit-arrow-linebreak
 const implicitArrowLineBreak = () =>
   10
 
@@ -33,10 +36,16 @@ const unusedRest = { a: 10, b: 20, c: 30 }
 const { a, ...args } = unusedRest
 fn(args)
 
+// class-methods-use-this
 export class NoThis {
   noThis() {
 
   }
 }
+
+// arrow-body-style
+fn(() => {
+  return 10
+})
 
 export default fn

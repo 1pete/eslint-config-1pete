@@ -14,6 +14,7 @@ yarn add --dev eslint eslint-config-1pete
 ```
 
 ### Overridden rules
+1. [arrow-body-style](#arrow-body-style)
 1. [class-methods-use-this](#class-methods-use-this)
 1. [implicit-arrow-linebreak](#implicit-arrow-linebreak)
 1. [no-await-in-loop](#no-await-in-loop)
@@ -22,6 +23,15 @@ yarn add --dev eslint eslint-config-1pete
 1. [no-use-before-define](#no-use-before-define)
 1. [prefer-const](#prefer-const)
 1. [semi](#semi)
+
+
+#### arrow-body-style
+this allows arrow function has normal return form
+```js
+const idMap = array.map((item) => {
+  return item.id
+})
+```
 
 #### class-methods-use-this
 this allows class function without using `this`
