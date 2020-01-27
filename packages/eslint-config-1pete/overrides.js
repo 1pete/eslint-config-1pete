@@ -29,11 +29,9 @@ module.exports = {
     ],
     'no-use-before-define': ['error', { functions: false, classes: true, variables: true }],
     'prefer-const': OFF,
-    'prefer-object-spread': ERROR,
     'require-atomic-updates': ERROR,
     semi: [ERROR, 'never'],
 
-    'import/no-useless-path-segments': [ERROR, { commonjs: true }],
     'import/prefer-default-export': OFF,
   },
 }

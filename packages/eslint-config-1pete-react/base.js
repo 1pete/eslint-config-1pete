@@ -616,6 +616,7 @@ module.exports = {
       'error',
       {
         order: [
+          'static-variables',
           'static-methods',
           'instance-variables',
           'lifecycle',
@@ -654,7 +655,6 @@ module.exports = {
             'componentDidUpdate',
             'componentDidCatch',
             'componentWillUnmount',
-            'componentDidCatch',
           ],
           rendering: [
             '/^render.+$/',
