@@ -20,12 +20,23 @@ module.exports = {
     'import/prefer-default-export': OFF,
 
     // error
+    'default-param-last': ERROR,
+    'grouped-accessor-pairs': ERROR,
     'no-async-promise-executor': ERROR,
+    'no-constructor-return': ERROR,
+    'no-dupe-else-if': ERROR,
+    'no-import-assign': ERROR,
     'no-misleading-character-class': ERROR,
+    'no-setter-return': ERROR,
+    'prefer-exponentiation-operator': ERROR,
+    'prefer-regex-literals': ERROR,
     'require-atomic-updates': ERROR,
     semi: [ERROR, 'never'],
 
     // error with config
+    'array-bracket-newline': [ERROR, 'consistent'],
+    'array-element-newline': [ERROR, 'consistent'],
+    'function-call-argument-newline': [ERROR, 'consistent'],
     'no-restricted-syntax': [
       ERROR,
       ...noRestrictedSyntaxBase.filter((syntax) => syntax.selector !== 'ForOfStatement'),
