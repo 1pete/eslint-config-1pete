@@ -11,12 +11,21 @@ module.exports = {
     ecmaVersion: 9,
   },
   rules: {
+    // off
     'arrow-body-style': OFF,
     'class-methods-use-this': OFF,
     'implicit-arrow-linebreak': OFF,
     'no-await-in-loop': OFF,
+    'prefer-const': OFF,
+    'import/prefer-default-export': OFF,
+
+    // error
     'no-async-promise-executor': ERROR,
     'no-misleading-character-class': ERROR,
+    'require-atomic-updates': ERROR,
+    semi: [ERROR, 'never'],
+
+    // error with config
     'no-restricted-syntax': [
       ERROR,
       ...noRestrictedSyntaxBase.filter((syntax) => syntax.selector !== 'ForOfStatement'),
@@ -29,10 +38,5 @@ module.exports = {
       },
     ],
     'no-use-before-define': ['error', { functions: false, classes: true, variables: true }],
-    'prefer-const': OFF,
-    'require-atomic-updates': ERROR,
-    semi: [ERROR, 'never'],
-
-    'import/prefer-default-export': OFF,
   },
 }
