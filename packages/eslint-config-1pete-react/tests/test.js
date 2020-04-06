@@ -1,7 +1,7 @@
 const _ = require('lodash')
 const { CLIEngine } = require('eslint')
 
-const getAllReportedRules = report =>
+const getAllReportedRules = (report) =>
   _.chain(report.results)
     .map('messages')
     .flatten()

@@ -6,12 +6,12 @@
     "test": "exit 0"
   },
   "devDependencies": {
-    "@octokit/rest": "~16.38.0",
+    "@octokit/rest": "~17.1.0",
     "confusing-browser-globals": "~1.0.0",
     "eslint": "~6.8.0",
     "eslint-plugin-import": "~2.20.0",
     "lodash": "~4.17.0",
     "object.assign": "~4.1.0",
-    "simple-git": "~1.131.0"
+    "simple-git": "~1.132.0"
   }
 }

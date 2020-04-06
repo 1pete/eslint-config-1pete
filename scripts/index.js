@@ -1,7 +1,9 @@
-const octokit = require('@octokit/rest')()
+const { Octokit } = require('@octokit/rest')
 const fs = require('fs')
 const simpleGit = require('simple-git/promise')
 const path = require('path')
+
+const octokit = new Octokit()
 
 const commitData = require('./commit-data.json')
 
