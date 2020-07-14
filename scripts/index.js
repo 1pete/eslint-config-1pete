@@ -26,7 +26,7 @@ async function isCommitDataChange(sha, date) {
 
 async function saveCommitData(sha, date) {
   const data = { sha, date }
-  fs.writeFileSync(path.resolve(__dirname, 'commit-data.json'), JSON.stringify(data, null, 2))
+  fs.writeFileSync(path.resolve(__dirname, 'commit-data.json'), `${JSON.stringify(data, null, 2)}\n`)
 }
 
 async function cloneRepo(sha) {

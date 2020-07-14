@@ -175,6 +175,7 @@ module.exports = {
         commentPattern: '^no default$',
       },
     ],
+    'default-case-last': 'off',
     'default-param-last': 'off',
     'dot-location': [
       'error',
@@ -280,6 +281,9 @@ module.exports = {
           'JSXExpressionContainer',
           'JSXOpeningElement',
           'JSXClosingElement',
+          'JSXFragment',
+          'JSXOpeningFragment',
+          'JSXClosingFragment',
           'JSXText',
           'JSXEmptyExpression',
           'JSXSpreadChild',
@@ -538,6 +542,7 @@ module.exports = {
     'no-lone-blocks': 'error',
     'no-lonely-if': 'error',
     'no-loop-func': 'error',
+    'no-loss-of-precision': 'off',
     'no-magic-numbers': [
       'off',
       {
@@ -615,8 +620,8 @@ module.exports = {
     'no-multiple-empty-lines': [
       'error',
       {
-        max: 2,
-        maxBOF: 1,
+        max: 1,
+        maxBOF: 0,
         maxEOF: 0,
       },
     ],
@@ -642,6 +647,7 @@ module.exports = {
           'accumulator',
           'e',
           'ctx',
+          'context',
           'req',
           'request',
           'res',
@@ -655,10 +661,20 @@ module.exports = {
     'no-plusplus': 'error',
     'no-process-env': 'off',
     'no-process-exit': 'off',
+    'no-promise-executor-return': 'off',
     'no-proto': 'error',
     'no-prototype-builtins': 'error',
     'no-redeclare': 'error',
     'no-regex-spaces': 'error',
+    'no-restricted-exports': [
+      'off',
+      {
+        restrictedNamedExports: [
+          'default',
+          'then',
+        ],
+      },
+    ],
     'no-restricted-globals': [
       'error',
       'isFinite',
@@ -853,6 +869,12 @@ module.exports = {
       },
     ],
     'no-unreachable': 'error',
+    'no-unreachable-loop': [
+      'off',
+      {
+        ignore: [],
+      },
+    ],
     'no-unsafe-finally': 'error',
     'no-unsafe-negation': 'error',
     'no-unused-expressions': [
@@ -880,6 +902,7 @@ module.exports = {
         variables: true,
       },
     ],
+    'no-useless-backreference': 'off',
     'no-useless-call': 'off',
     'no-useless-catch': 'error',
     'no-useless-computed-key': 'error',
@@ -1136,6 +1159,7 @@ module.exports = {
           markers: [
             '=',
             '!',
+            '/',
           ],
         },
         block: {
@@ -1244,7 +1268,7 @@ module.exports = {
     'import/no-cycle': [
       'error',
       {
-        maxDepth: 1000,
+        maxDepth: '∞',
       },
     ],
     'import/no-default-export': 'off',

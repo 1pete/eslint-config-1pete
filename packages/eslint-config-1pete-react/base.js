@@ -119,6 +119,12 @@ module.exports = {
       },
     ],
     'jsx-a11y/aria-unsupported-elements': 'error',
+    'jsx-a11y/autocomplete-valid': [
+      'off',
+      {
+        inputComponents: [],
+      },
+    ],
     'jsx-a11y/click-events-have-key-events': 'error',
     'jsx-a11y/control-has-associated-label': [
       'error',
@@ -369,6 +375,13 @@ module.exports = {
         checkChildContextTypes: true,
       },
     ],
+    'react/function-component-definition': [
+      'off',
+      {
+        namedComponents: 'function-expression',
+        unnamedComponents: 'function-expression',
+      },
+    ],
     'react/jsx-boolean-value': [
       'error',
       'never',
@@ -470,6 +483,17 @@ module.exports = {
         noStrings: true,
       },
     ],
+    'react/jsx-no-script-url': [
+      'off',
+      [
+        {
+          name: 'Link',
+          props: [
+            'to',
+          ],
+        },
+      ],
+    ],
     'react/jsx-no-target-blank': [
       'error',
       {
@@ -477,6 +501,7 @@ module.exports = {
       },
     ],
     'react/jsx-no-undef': 'error',
+    'react/jsx-no-useless-fragment': 'off',
     'react/jsx-one-expression-per-line': [
       'error',
       {
@@ -496,6 +521,7 @@ module.exports = {
       {
         html: 'enforce',
         custom: 'enforce',
+        explicitSpread: 'ignore',
         exceptions: [],
       },
     ],
@@ -547,6 +573,7 @@ module.exports = {
       },
     ],
     'react/no-access-state-in-setstate': 'error',
+    'react/no-adjacent-inline-elements': 'off',
     'react/no-array-index-key': 'error',
     'react/no-children-prop': 'error',
     'react/no-danger': 'warn',
