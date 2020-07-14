@@ -21,14 +21,14 @@
     "overrides.js"
   ],
   "peerDependencies": {
-    "eslint": "^6.8.0"
+    "eslint": "^7.4.0"
   },
   "dependencies": {
-    "eslint-plugin-import": "~2.20.0"
+    "eslint-plugin-import": "~2.22.0"
   },
   "devDependencies": {
-    "eslint": "~6.8.0",
-    "eslint-find-rules": "~3.4.0",
+    "eslint": "~7.4.0",
+    "eslint-find-rules": "~3.6.0",
     "lodash": "~4.17.0",
     "mocha": "~5.2.0"
   },
@@ -38,6 +38,6 @@
     "test": "mocha tests/test.js"
   },
   "engines": {
-    "node": ">= 8"
+    "node": ">= 10"
   }
 }
