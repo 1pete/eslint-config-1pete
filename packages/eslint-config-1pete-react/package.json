@@ -20,7 +20,7 @@
     "overrides.js"
   ],
   "peerDependencies": {
-    "eslint": "^7.4.0"
+    "eslint": "^7.6.0"
   },
   "dependencies": {
     "eslint-config-1pete": "~2.1.0",
@@ -28,7 +28,7 @@
     "eslint-plugin-react": "~7.20.0"
   },
   "devDependencies": {
-    "eslint": "~7.4.0",
+    "eslint": "~7.6.0",
     "eslint-find-rules": "~3.6.0",
     "lodash": "~4.17.0",
     "mocha": "~5.2.0"
