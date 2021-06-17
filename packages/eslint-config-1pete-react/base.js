@@ -71,7 +71,7 @@ module.exports = {
       'error',
       'never',
     ],
-    'jsx-a11y/accessible-emoji': 'error',
+    'jsx-a11y/accessible-emoji': 'off',
     'jsx-a11y/alt-text': [
       'error',
       {
@@ -115,7 +115,7 @@ module.exports = {
     'jsx-a11y/aria-role': [
       'error',
       {
-        ignoreNonDom: false,
+        ignoreNonDOM: false,
       },
     ],
     'jsx-a11y/aria-unsupported-elements': 'error',
@@ -460,6 +460,7 @@ module.exports = {
         when: 'multiline',
       },
     ],
+    'react/jsx-newline': 'off',
     'react/jsx-no-bind': [
       'error',
       {
@@ -471,6 +472,7 @@ module.exports = {
       },
     ],
     'react/jsx-no-comment-textnodes': 'error',
+    'react/jsx-no-constructed-context-values': 'off',
     'react/jsx-no-duplicate-props': [
       'error',
       {
@@ -596,6 +598,7 @@ module.exports = {
     'react/no-unescaped-entities': 'error',
     'react/no-unknown-property': 'error',
     'react/no-unsafe': 'off',
+    'react/no-unstable-nested-components': 'off',
     'react/no-unused-prop-types': [
       'error',
       {
@@ -647,6 +650,7 @@ module.exports = {
           'static-methods',
           'instance-variables',
           'lifecycle',
+          '/^handle.+$/',
           '/^on.+$/',
           'getters',
           'setters',

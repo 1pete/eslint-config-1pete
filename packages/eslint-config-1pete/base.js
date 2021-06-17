@@ -156,7 +156,7 @@ module.exports = {
     ],
     complexity: [
       'off',
-      11,
+      20,
     ],
     'computed-property-spacing': [
       'error',
@@ -242,6 +242,7 @@ module.exports = {
     'guard-for-in': 'error',
     'handle-callback-err': 'off',
     'id-blacklist': 'off',
+    'id-denylist': 'off',
     'id-length': 'off',
     'id-match': 'off',
     'implicit-arrow-linebreak': [
@@ -635,6 +636,7 @@ module.exports = {
     'no-new-require': 'error',
     'no-new-symbol': 'error',
     'no-new-wrappers': 'error',
+    'no-nonoctal-decimal-escape': 'off',
     'no-obj-calls': 'error',
     'no-octal': 'error',
     'no-octal-escape': 'error',
@@ -677,8 +679,14 @@ module.exports = {
     ],
     'no-restricted-globals': [
       'error',
-      'isFinite',
-      'isNaN',
+      {
+        name: 'isFinite',
+        message: 'Use Number.isFinite instead https://github.com/airbnb/javascript#standard-library--isfinite',
+      },
+      {
+        name: 'isNaN',
+        message: 'Use Number.isNaN instead https://github.com/airbnb/javascript#standard-library--isnan',
+      },
       'addEventListener',
       'blur',
       'close',
@@ -877,6 +885,12 @@ module.exports = {
     ],
     'no-unsafe-finally': 'error',
     'no-unsafe-negation': 'error',
+    'no-unsafe-optional-chaining': [
+      'off',
+      {
+        disallowArithmeticOperators: true,
+      },
+    ],
     'no-unused-expressions': [
       'error',
       {
@@ -1300,6 +1314,7 @@ module.exports = {
           '**/protractor.conf.js',
           '**/protractor.conf.*.js',
           '**/karma.conf.js',
+          '**/.eslintrc.js',
         ],
         optionalDependencies: false,
       },
