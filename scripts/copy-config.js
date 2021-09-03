@@ -4,7 +4,7 @@ const path = require('path')
 const { CLIEngine } = require('eslint')
 
 // eslint-disable-next-line import/no-unresolved
-const baseConfig = require('./airbnb-config/packages/eslint-config-airbnb-base/index.js')
+const baseConfig = require('./airbnb-config/packages/eslint-config-airbnb-base/index')
 
 const reactConfig = {
   extends: [
@@ -30,13 +30,7 @@ packages.forEach(([targetConfig, packageName]) => {
 
   _.merge(config, extra)
 
-  const {
-    plugins,
-    env,
-    parserOptions,
-    settings,
-    rules,
-  } = config
+  const { plugins, env, parserOptions, settings, rules } = config
 
   const ruleNames = Object.keys(rules).sort((a, b) => {
     const aFromPlugin = a.includes('/')
@@ -47,15 +41,28 @@ packages.forEach(([targetConfig, packageName]) => {
     return a < b ? -1 : 1
   })
 
-  const content = `module.exports = ${JSON.stringify({
-    plugins,
-    parserOptions,
-    settings,
-    env,
-    rules: ruleNames.reduce((acc, ruleName) => ({ ...acc, [ruleName]: rules[ruleName] }), {}),
-  }, (key, value) => (value === Infinity ? 1000 : value), 2)}\n`
+  const content = `module.exports = ${JSON.stringify(
+    {
+      plugins,
+      parserOptions,
+      settings,
+      env,
+      rules: ruleNames.reduce(
+        (acc, ruleName) => ({ ...acc, [ruleName]: rules[ruleName] }),
+        {},
+      ),
+    },
+    (key, value) => (value === Infinity ? 1000 : value),
+    2,
+  )}\n`
 
-  const filePath = path.resolve(__dirname, '..', 'packages', packageName, 'base.js')
+  const filePath = path.resolve(
+    __dirname,
+    '..',
+    'packages',
+    packageName,
+    'base.js',
+  )
   fs.writeFileSync(filePath, content)
 
   // run twice

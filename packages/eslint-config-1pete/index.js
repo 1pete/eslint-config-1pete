@@ -1,6 +1,7 @@
 module.exports = {
   extends: [
-    './base',
-    './overrides',
-  ].map(require.resolve),
+    require.resolve('./base'),
+    'prettier',
+    require.resolve('./overrides'),
+  ],
 }

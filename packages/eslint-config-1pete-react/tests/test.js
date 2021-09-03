@@ -12,7 +12,9 @@ const getAllReportedRules = (report) =>
 
 describe('eslint config 1pete react', () => {
   it('test pass', () => {
-    const report = new CLIEngine().executeOnFiles(['./tests/subjects/pass/*.js'])
+    const report = new CLIEngine().executeOnFiles([
+      './tests/subjects/pass/*.js',
+    ])
 
     if (report.errorCount > 0) {
       const errors = getAllReportedRules(report)

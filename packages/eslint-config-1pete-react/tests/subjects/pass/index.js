@@ -7,14 +7,14 @@ class Hello extends Component {
     const world = 'World'
 
     return (
-      <div>{hello} {world}</div>
+      <div>
+        {hello} {world}
+      </div>
     )
   }
 
   render() {
-    return (
-      <div>Hello World</div>
-    )
+    return <div>Hello World</div>
   }
 }
 

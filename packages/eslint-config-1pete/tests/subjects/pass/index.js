@@ -16,8 +16,7 @@ async function awaitInLoop() {
 awaitInLoop()
 
 // implicit-arrow-linebreak
-const implicitArrowLineBreak = () =>
-  10
+const implicitArrowLineBreak = () => 10
 
 fn(implicitArrowLineBreak)
 
@@ -38,9 +37,7 @@ fn(args)
 
 // class-methods-use-this
 export class NoThis {
-  noThis() {
-
-  }
+  noThis() {}
 }
 
 // arrow-body-style

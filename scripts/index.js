@@ -10,8 +10,12 @@ const commitData = require('./commit-data.json')
 const repo = { owner: 'airbnb', repo: 'javascript' }
 
 async function getLatestCommit() {
-  const { data: [{ sha }] } = await octokit.repos.listCommits({ ...repo, per_page: 1 })
-  const { data: { commit } } = await octokit.repos.getCommit({ ...repo, ref: sha })
+  const {
+    data: [{ sha }],
+  } = await octokit.repos.listCommits({ ...repo, per_page: 1 })
+  const {
+    data: { commit },
+  } = await octokit.repos.getCommit({ ...repo, ref: sha })
 
   const { date } = commit.committer
 
@@ -26,12 +30,18 @@ async function isCommitDataChange(sha, date) {
 
 async function saveCommitData(sha, date) {
   const data = { sha, date }
-  fs.writeFileSync(path.resolve(__dirname, 'commit-data.json'), `${JSON.stringify(data, null, 2)}\n`)
+  fs.writeFileSync(
+    path.resolve(__dirname, 'commit-data.json'),
+    `${JSON.stringify(data, null, 2)}\n`,
+  )
 }
 
 async function cloneRepo(sha) {
   if (!fs.existsSync(path.resolve(__dirname, 'airbnb-config'))) {
-    await simpleGit(path.resolve(__dirname)).clone('https://github.com/airbnb/javascript.git', 'airbnb-config')
+    await simpleGit(path.resolve(__dirname)).clone(
+      'https://github.com/airbnb/javascript.git',
+      'airbnb-config',
+    )
   }
 
   const git = simpleGit(path.resolve(__dirname, 'airbnb-config'))
@@ -40,17 +50,18 @@ async function cloneRepo(sha) {
     const log = await git.log({ 'max-count': 0 })
     return log.latest.hash
   }
-  if (sha === await getLatestHash()) return
+  if (sha === (await getLatestHash())) return
 
   await git.pull()
 
-  if (sha !== await getLatestHash()) throw new Error('latest commit sha mismatch')
+  if (sha !== (await getLatestHash()))
+    throw new Error('latest commit sha mismatch')
 }
 
 async function run() {
   const { sha, date } = await getLatestCommit()
 
-  if (!await isCommitDataChange(sha, date)) return
+  if (!(await isCommitDataChange(sha, date))) return
 
   await saveCommitData(sha, date)
   await cloneRepo(sha)

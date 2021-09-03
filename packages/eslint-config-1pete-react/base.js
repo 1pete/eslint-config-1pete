@@ -1,8 +1,5 @@
 module.exports = {
-  plugins: [
-    'jsx-a11y',
-    'react',
-  ],
+  plugins: ['jsx-a11y', 'react'],
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
@@ -11,22 +8,14 @@ module.exports = {
   settings: {
     'import/resolver': {
       node: {
-        extensions: [
-          '.js',
-          '.jsx',
-          '.json',
-        ],
+        extensions: ['.js', '.jsx', '.json'],
       },
     },
     react: {
       pragma: 'React',
       version: 'detect',
     },
-    propWrapperFunctions: [
-      'forbidExtraProps',
-      'exact',
-      'Object.freeze',
-    ],
+    propWrapperFunctions: ['forbidExtraProps', 'exact', 'Object.freeze'],
   },
   rules: {
     'class-methods-use-this': [
@@ -52,35 +41,22 @@ module.exports = {
         ],
       },
     ],
-    'jsx-quotes': [
-      'error',
-      'prefer-double',
-    ],
+    'jsx-quotes': ['error', 'prefer-double'],
     'no-underscore-dangle': [
       'error',
       {
-        allow: [
-          '__REDUX_DEVTOOLS_EXTENSION_COMPOSE__',
-        ],
+        allow: ['__REDUX_DEVTOOLS_EXTENSION_COMPOSE__'],
         allowAfterThis: false,
         allowAfterSuper: false,
         enforceInMethodNames: true,
       },
     ],
-    strict: [
-      'error',
-      'never',
-    ],
+    strict: ['error', 'never'],
     'jsx-a11y/accessible-emoji': 'off',
     'jsx-a11y/alt-text': [
       'error',
       {
-        elements: [
-          'img',
-          'object',
-          'area',
-          'input[type="image"]',
-        ],
+        elements: ['img', 'object', 'area', 'input[type="image"]'],
         img: [],
         object: [],
         area: [],
@@ -96,17 +72,9 @@ module.exports = {
     'jsx-a11y/anchor-is-valid': [
       'error',
       {
-        components: [
-          'Link',
-        ],
-        specialLink: [
-          'to',
-        ],
-        aspects: [
-          'noHref',
-          'invalidHref',
-          'preferButton',
-        ],
+        components: ['Link'],
+        specialLink: ['to'],
+        aspects: ['noHref', 'invalidHref', 'preferButton'],
       },
     ],
     'jsx-a11y/aria-activedescendant-has-tabindex': 'error',
@@ -129,9 +97,7 @@ module.exports = {
     'jsx-a11y/control-has-associated-label': [
       'error',
       {
-        labelAttributes: [
-          'label',
-        ],
+        labelAttributes: ['label'],
         controlComponents: [],
         ignoreElements: [
           'audio',
@@ -160,9 +126,7 @@ module.exports = {
     'jsx-a11y/heading-has-content': [
       'error',
       {
-        components: [
-          '',
-        ],
+        components: [''],
       },
     ],
     'jsx-a11y/html-has-lang': 'error',
@@ -184,10 +148,7 @@ module.exports = {
       {
         components: [],
         required: {
-          every: [
-            'nesting',
-            'id',
-          ],
+          every: ['nesting', 'id'],
         },
         allowChildren: false,
       },
@@ -212,19 +173,13 @@ module.exports = {
     'jsx-a11y/no-distracting-elements': [
       'error',
       {
-        elements: [
-          'marquee',
-          'blink',
-        ],
+        elements: ['marquee', 'blink'],
       },
     ],
     'jsx-a11y/no-interactive-element-to-noninteractive-role': [
       'error',
       {
-        tr: [
-          'none',
-          'presentation',
-        ],
+        tr: ['none', 'presentation'],
       },
     ],
     'jsx-a11y/no-noninteractive-element-interactions': [
@@ -261,28 +216,16 @@ module.exports = {
           'tree',
           'treegrid',
         ],
-        li: [
-          'menuitem',
-          'option',
-          'row',
-          'tab',
-          'treeitem',
-        ],
-        table: [
-          'grid',
-        ],
-        td: [
-          'gridcell',
-        ],
+        li: ['menuitem', 'option', 'row', 'tab', 'treeitem'],
+        table: ['grid'],
+        td: ['gridcell'],
       },
     ],
     'jsx-a11y/no-noninteractive-tabindex': [
       'error',
       {
         tags: [],
-        roles: [
-          'tabpanel',
-        ],
+        roles: ['tabpanel'],
       },
     ],
     'jsx-a11y/no-onchange': 'off',
@@ -307,10 +250,7 @@ module.exports = {
     'react/boolean-prop-naming': [
       'off',
       {
-        propTypeNames: [
-          'bool',
-          'mutuallyExclusiveTrueProps',
-        ],
+        propTypeNames: ['bool', 'mutuallyExclusiveTrueProps'],
         rule: '^(is|has)[A-Z]([A-Za-z0-9]?)+',
         message: '',
       },
@@ -329,10 +269,7 @@ module.exports = {
         allowRequiredDefaults: false,
       },
     ],
-    'react/destructuring-assignment': [
-      'error',
-      'always',
-    ],
+    'react/destructuring-assignment': ['error', 'always'],
     'react/display-name': [
       'off',
       {
@@ -366,11 +303,7 @@ module.exports = {
     'react/forbid-prop-types': [
       'error',
       {
-        forbid: [
-          'any',
-          'array',
-          'object',
-        ],
+        forbid: ['any', 'array', 'object'],
         checkContextTypes: true,
         checkChildContextTypes: true,
       },
@@ -390,10 +323,7 @@ module.exports = {
       },
     ],
     'react/jsx-child-element-spacing': 'off',
-    'react/jsx-closing-bracket-location': [
-      'error',
-      'line-aligned',
-    ],
+    'react/jsx-closing-bracket-location': ['error', 'line-aligned'],
     'react/jsx-closing-tag-location': 'error',
     'react/jsx-curly-brace-presence': [
       'error',
@@ -416,26 +346,15 @@ module.exports = {
         allowMultiline: true,
       },
     ],
-    'react/jsx-equals-spacing': [
-      'error',
-      'never',
-    ],
+    'react/jsx-equals-spacing': ['error', 'never'],
     'react/jsx-filename-extension': [
       'error',
       {
-        extensions: [
-          '.jsx',
-        ],
+        extensions: ['.jsx'],
       },
     ],
-    'react/jsx-first-prop-new-line': [
-      'error',
-      'multiline-multiprop',
-    ],
-    'react/jsx-fragments': [
-      'error',
-      'syntax',
-    ],
+    'react/jsx-first-prop-new-line': ['error', 'multiline-multiprop'],
+    'react/jsx-fragments': ['error', 'syntax'],
     'react/jsx-handler-names': [
       'off',
       {
@@ -443,14 +362,8 @@ module.exports = {
         eventHandlerPropPrefix: 'on',
       },
     ],
-    'react/jsx-indent': [
-      'error',
-      2,
-    ],
-    'react/jsx-indent-props': [
-      'error',
-      2,
-    ],
+    'react/jsx-indent': ['error', 2],
+    'react/jsx-indent-props': ['error', 2],
     'react/jsx-key': 'off',
     'react/jsx-max-depth': 'off',
     'react/jsx-max-props-per-line': [
@@ -490,9 +403,7 @@ module.exports = {
       [
         {
           name: 'Link',
-          props: [
-            'to',
-          ],
+          props: ['to'],
         },
       ],
     ],
@@ -545,10 +456,7 @@ module.exports = {
         reservedFirst: true,
       },
     ],
-    'react/jsx-space-before-closing': [
-      'off',
-      'always',
-    ],
+    'react/jsx-space-before-closing': ['off', 'always'],
     'react/jsx-tag-spacing': [
       'error',
       {
@@ -558,9 +466,7 @@ module.exports = {
         beforeClosing: 'never',
       },
     ],
-    'react/jsx-uses-react': [
-      'error',
-    ],
+    'react/jsx-uses-react': ['error'],
     'react/jsx-uses-vars': 'error',
     'react/jsx-wrap-multilines': [
       'error',
@@ -580,9 +486,7 @@ module.exports = {
     'react/no-children-prop': 'error',
     'react/no-danger': 'warn',
     'react/no-danger-with-children': 'error',
-    'react/no-deprecated': [
-      'error',
-    ],
+    'react/no-deprecated': ['error'],
     'react/no-did-mount-set-state': 'off',
     'react/no-did-update-set-state': 'error',
     'react/no-direct-mutation-state': 'off',
@@ -608,10 +512,7 @@ module.exports = {
     ],
     'react/no-unused-state': 'error',
     'react/no-will-update-set-state': 'error',
-    'react/prefer-es6-class': [
-      'error',
-      'always',
-    ],
+    'react/prefer-es6-class': ['error', 'always'],
     'react/prefer-read-only-props': 'off',
     'react/prefer-stateless-function': [
       'error',
@@ -687,10 +588,7 @@ module.exports = {
             'componentDidCatch',
             'componentWillUnmount',
           ],
-          rendering: [
-            '/^render.+$/',
-            'render',
-          ],
+          rendering: ['/^render.+$/', 'render'],
         },
       },
     ],
@@ -703,14 +601,8 @@ module.exports = {
         sortShapeProp: true,
       },
     ],
-    'react/state-in-constructor': [
-      'error',
-      'always',
-    ],
-    'react/static-property-placement': [
-      'error',
-      'property assignment',
-    ],
+    'react/state-in-constructor': ['error', 'always'],
+    'react/static-property-placement': ['error', 'property assignment'],
     'react/style-prop-object': 'error',
     'react/void-dom-elements-no-children': 'error',
   },

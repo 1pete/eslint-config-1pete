@@ -14,7 +14,6 @@ module.exports = {
     // off
     'arrow-body-style': OFF,
     'class-methods-use-this': OFF,
-    'implicit-arrow-linebreak': OFF,
     'no-await-in-loop': OFF,
     'prefer-const': OFF,
     'import/prefer-default-export': OFF,
@@ -42,12 +41,11 @@ module.exports = {
     'import/no-relative-packages': ERROR,
 
     // error with config
-    'array-bracket-newline': [ERROR, 'consistent'],
-    'array-element-newline': [ERROR, 'consistent'],
-    'function-call-argument-newline': [ERROR, 'consistent'],
     'no-restricted-syntax': [
       ERROR,
-      ...noRestrictedSyntaxBase.filter((syntax) => syntax.selector !== 'ForOfStatement'),
+      ...noRestrictedSyntaxBase.filter(
+        (syntax) => syntax.selector !== 'ForOfStatement',
+      ),
     ],
     'no-unused-vars': [
       ERROR,
@@ -56,7 +54,9 @@ module.exports = {
         argsIgnorePattern: '^_',
       },
     ],
-    'no-use-before-define': ['error', { functions: false, classes: true, variables: true }],
-    semi: [ERROR, 'never'],
+    'no-use-before-define': [
+      'error',
+      { functions: false, classes: true, variables: true },
+    ],
   },
 }

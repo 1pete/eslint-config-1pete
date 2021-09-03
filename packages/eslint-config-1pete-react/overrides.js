@@ -4,6 +4,5 @@ module.exports = {
     'class-methods-use-this': 'off',
     'react/forbid-prop-types': 'off',
     'react/jsx-filename-extension': ['error', { extensions: ['.js'] }],
-    'react/jsx-one-expression-per-line': 'off',
   },
 }
