@@ -1,5 +1,5 @@
 const _ = require('lodash')
-const { CLIEngine } = require('eslint')
+const { ESLint } = require('eslint')
 const fs = require('fs')
 const path = require('path')
 
@@ -14,7 +14,7 @@ const getAllReportedRules = (report) =>
 
 describe('eslint config 1pete', () => {
   it('test pass', () => {
-    const report = new CLIEngine().executeOnFiles([
+    const report = new ESLint().lintFiles([
       './tests/subjects/pass/*.js',
     ])
 
@@ -39,21 +39,21 @@ describe('eslint config 1pete', () => {
       const ruleName = folderName.includes('_')
         ? folderName.split('_').join('/')
         : folderName
-      it(`rule: ${ruleName}`, () => {
+      it(`rule: ${ruleName}`, async () => {
         const fileNames = fs.readdirSync(path.resolve(subjectPath, folderName))
-        fileNames.forEach((fileName) => {
-          const report = new CLIEngine().executeOnFiles([
+        for (let fileName of fileNames) {
+          const report = await new ESLint().lintFiles([
             path.resolve(path.resolve(subjectPath, folderName, fileName)),
           ])
           if (
-            report.errorCount === 0 ||
-            !getAllReportedRules(report).includes(ruleName)
+            report.length === 0 ||
+            !getAllReportedRules(report[0].messages.some(message => message.ruleId === ruleName))
           ) {
             throw new Error(
               `expect error "${ruleName}" from file "${fileName}" but not found`,
             )
           }
-        })
+        }
       })
     })
   })

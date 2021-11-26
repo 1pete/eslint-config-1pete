@@ -1,5 +1,5 @@
 const _ = require('lodash')
-const { CLIEngine } = require('eslint')
+const { ESLint } = require('eslint')
 
 const getAllReportedRules = (report) =>
   _.chain(report.results)
@@ -12,11 +12,11 @@ const getAllReportedRules = (report) =>
 
 describe('eslint config 1pete react', () => {
   it('test pass', () => {
-    const report = new CLIEngine().executeOnFiles([
+    const report = new ESLint().lintFiles([
       './tests/subjects/pass/*.js',
     ])
 
-    if (report.errorCount > 0) {
+    if (report.length > 0) {
       const errors = getAllReportedRules(report)
       throw new Error(`get errors from:\n\t${errors.join('\n\t')}`)
     }
