@@ -21,15 +21,15 @@
     "overrides.js"
   ],
   "peerDependencies": {
-    "eslint": "^7.32.0"
+    "eslint": "^8.3.0"
   },
   "dependencies": {
     "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-import": "^2.24.0"
+    "eslint-plugin-import": "^2.25.0"
   },
   "devDependencies": {
-    "eslint": "~7.32.0",
-    "eslint-find-rules": "~3.6.0",
+    "eslint": "~8.3.0",
+    "eslint-find-rules": "~4.0.0",
     "lodash": "~4.17.0",
     "mocha": "~5.2.0"
   },
