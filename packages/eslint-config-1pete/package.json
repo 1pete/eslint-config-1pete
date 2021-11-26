@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-1pete",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "description": "",
   "main": "index.js",
   "homepage": "https://github.com/1pete/eslint-config-1pete",
@@ -39,6 +39,6 @@
     "test": "mocha tests/test.js"
   },
   "engines": {
-    "node": ">= 12"
+    "node": ">= 14"
   }
 }
