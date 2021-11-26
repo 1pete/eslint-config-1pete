@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-1pete-react",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "description": "",
   "main": "index.js",
   "repository": "github:1pete/eslint-config-1pete-react",
@@ -39,6 +39,6 @@
     "test": "mocha tests/test.js"
   },
   "engines": {
-    "node": ">= 10"
+    "node": ">= 14"
   }
 }
