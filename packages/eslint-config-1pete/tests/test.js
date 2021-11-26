@@ -4,21 +4,14 @@ const fs = require('fs')
 const path = require('path')
 
 const getAllReportedRules = (report) =>
-  _.chain(report.results)
-    .map('messages')
-    .flatten()
-    .map('ruleId')
-    .uniq()
-    .sort()
-    .value()
+  _.chain(report).map('messages').flatten().map('ruleId').uniq().sort().value()
 
 describe('eslint config 1pete', () => {
-  it('test pass', () => {
-    const report = new ESLint().lintFiles([
-      './tests/subjects/pass/*.js',
-    ])
+  it('test pass', async () => {
+    const report = await new ESLint().lintFiles(['./tests/subjects/pass/*.js'])
 
-    if (report.errorCount > 0) {
+    const error = report.filter((item) => item.messages.length > 0)
+    if (error.length > 0) {
       const errors = getAllReportedRules(report)
       throw new Error(`get errors from:\n\t${errors.join('\n\t')}`)
     }
@@ -47,7 +40,9 @@ describe('eslint config 1pete', () => {
           ])
           if (
             report.length === 0 ||
-            !getAllReportedRules(report[0].messages.some(message => message.ruleId === ruleName))
+            !getAllReportedRules(
+              report[0].messages.some((message) => message.ruleId === ruleName),
+            )
           ) {
             throw new Error(
               `expect error "${ruleName}" from file "${fileName}" but not found`,

@@ -14,6 +14,10 @@ class Hello extends Component {
   }
 
   render() {
+    if (global.a === 1) {
+      return this.render1()
+    }
+
     return <div>Hello World</div>
   }
 }
