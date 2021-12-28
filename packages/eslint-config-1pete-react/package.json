@@ -31,7 +31,7 @@
     "eslint": "~8.3.0",
     "eslint-find-rules": "~4.0.0",
     "lodash": "~4.17.0",
-    "mocha": "~5.2.0"
+    "mocha": "~9.1.0"
   },
   "scripts": {
     "check-rules": "eslint-find-rules -u",
